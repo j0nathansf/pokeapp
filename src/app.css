@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body > div:first-child {
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+}
+
+/** =================== MONTSERRAT =================== **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-style: normal;
+    src: url("/fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+}
+
+/** Montserrat Regular **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+
+/** Montserrat Medium **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-style: normal;
+    src: url("/fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+}
+
+/** Montserrat SemiBold **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-style: normal;
+    src: url("/fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+/** Montserrat Bold **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    src: url("/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/** =================== KARLA =================== **/
+@font-face {
+    font-family: "Karla";
+    font-weight: 300;
+    font-style: normal;
+    src: url("/fonts/Karla/Karla-Light.ttf") format("truetype");
+}
+
+/** Karla Regular **/
+@font-face {
+    font-family: "Karla";
+    font-weight: 400;
+    font-style: normal;
+    src: url("/fonts/Karla/Karla-Regular.ttf") format("truetype");
+}
+
+/** Karla Medium **/
+@font-face {
+    font-family: "Karla";
+    font-weight: 500;
+    font-style: normal;
+    src: url("/fonts/Karla/Karla-Medium.ttf") format("truetype");
+}
+
+/** Karla SemiBold **/
+@font-face {
+    font-family: "Karla";
+    font-weight: 600;
+    font-style: normal;
+    src: url("/fonts/Karla/Karla-SemiBold.ttf") format("truetype");
+}
+
+/** Karla Bold **/
+@font-face {
+    font-family: "Karla";
+    font-weight: 700;
+    font-style: normal;
+    src: url("/fonts/Karla/Karla-Bold.ttf") format("truetype");
+}
+
+.font-karla {
+    font-family: 'Karla', sans-serif !important;
+}
