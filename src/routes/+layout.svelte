@@ -16,7 +16,7 @@
 
 {#if !notFound}
 <header class="bg-third header-shadow z-10">
-  <nav class="h-14 tablet:h-24 flex px-6 justify-between items-center max-w-screen-desktop mx-auto">
+  <nav class="h-14 tablet:h-24 flex px-6 justify-between items-center max-w-screen-medium mx-auto">
     <img class="h-8 tablet:h-12 desktop:h-16" src="/images/logo.svg" alt="pokemon website logo" draggable="false" />
     <ul class="flex gap-x-6 desktop:gap-x-[64px]">
       {#if screenSize < 768}

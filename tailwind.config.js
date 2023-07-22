@@ -23,6 +23,7 @@ export default {
     },
     screens: {
       tablet: '768px',
+      medium: '1096px',
       desktop: '1440px',
     },
     fontWeight: {
