@@ -27,12 +27,3 @@
         <img src={pokemonData['sprites']['other']['official-artwork']['front_default']} alt={`${pokemonData.name} picture`} draggable="false" class="h-full w-full object-contain" />
     </div>
 </div>
-
-<style>
-    .card-shadow {
-        box-shadow: 4px 4px 4px 0px rgba(33, 33, 33, 0.10);
-    }
-    .tag-shadow {
-        box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.18) inset;
-    }
-</style>

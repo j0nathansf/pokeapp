@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body > div:first-child {
-    display: flex !important;
-    flex-direction: column;
-    height: 100%;
-}
-
 /** =================== MONTSERRAT =================== **/
 @font-face {
     font-family: "Montserrat";
@@ -94,4 +88,49 @@ body > div:first-child {
 
 .font-karla {
     font-family: 'Karla', sans-serif !important;
+}
+
+/** =================== OTHER =================== **/
+
+body > div:first-child {
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header-shadow {
+    box-shadow: 0 4px 16px 0 rgba(1, 28, 64, 0.20);
+}
+
+.active-link {
+    padding-bottom: 16px;
+    border-bottom: 3px solid #212121;
+    pointer-events: none;
+    border-radius: 24px;
+}
+
+.card-shadow {
+    box-shadow: 4px 4px 4px 0px rgba(33, 33, 33, 0.10);
+}
+.tag-shadow {
+    box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.18) inset;
+}
+
+.skeleton {
+    background-color: #e0e0e0;
+    animation: loading 1s infinite ease-in-out;
+}
+
+@keyframes loading {
+    0% { opacity: 0.7; }
+    50% { opacity: 0.9; }
+    100% { opacity: 0.7; }
+}
+
+.shadow-button {
+    box-shadow: 0 -9px 0 0 rgba(0, 0, 0, 0.18) inset;
+}
+
+.yellow-gradient {
+    background: linear-gradient(180deg, #f5db13 0%, #f2b807 100%);
 }
