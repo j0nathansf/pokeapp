@@ -45,12 +45,12 @@
 		class="gap-8 max-w-screen-medium px-6 flex flex-col justify-between medium:justify-normal mx-auto medium:relative h-full"
 	>
 		<section class="flex flex-col gap-9">
-			<p class="font-montserrat text-center text-36">
+			<p class="font-montserrat text-center text-24 tablet:text-36">
 				<AnimatedValue start={0} end={data.total} duration={500} />
 				<span class="font-bold">Pokemons</span> for you to choose your favorite
 			</p>
 			<input
-				class="rounded-40 bg-white px-8 py-4 font-montserrat"
+				class="rounded-40 text-12 px-5 bg-white medium:px-8 py-2 tablet:text-16 medium:py-4 font-montserrat"
 				bind:value={searchValue}
 				type="text"
 				placeholder="Search a pokemon..."
