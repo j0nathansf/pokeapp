@@ -2,7 +2,7 @@
     import { onMount } from 'svelte'
     import Footer from "$components/Footer.svelte"
     import PokeCard from "$components/PokeCard.svelte"
-    import Skeleton from "$components/Skeleton.svelte"
+    import CardSkeleton from "$components/CardSkeleton.svelte"
     let searchValue = ""
     let offset = 20 * Math.floor(Math.random() * 40)
     let data = {
@@ -49,7 +49,10 @@
         </section>
         <section class="flex flex-wrap gap-y-12 gap-x-6">
             {#if data.loading || !data.pokemonList.length}
-                <Skeleton />
+                <!-- eslint-disable @typescript-eslint/no-unused-vars -->
+                {#each Array(5) as _}
+                    <CardSkeleton />
+                {/each}
             {:else}
                 {#each data.pokemonList as pokemonData}
                     <PokeCard {pokemonData} />

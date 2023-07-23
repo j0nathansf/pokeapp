@@ -17,9 +17,9 @@
                 {/if}
             {/each}
         </section>
-        <section class="flex flex-wrap gap-x-3">
+        <section class="flex gap-x-3">
             {#each pokemonData.types as types}
-                <span class="capitalize text-12 border rounded-12 px-2">{types.type.name}</span>
+                <span class="capitalize text-12 rounded-12 px-2 py-1 bg-grass tag-shadow">{types.type.name}</span>
             {/each}
         </section>
     </div>
@@ -31,5 +31,8 @@
 <style>
     .card-shadow {
         box-shadow: 4px 4px 4px 0px rgba(33, 33, 33, 0.10);
+    }
+    .tag-shadow {
+        box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.18) inset;
     }
 </style>
