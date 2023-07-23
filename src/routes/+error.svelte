@@ -1,5 +1,5 @@
 <script>
-    import ButtonLink from '../components/ButtonLink.svelte'
+    import ButtonLink from '$components/ButtonLink.svelte'
 </script>
 
 

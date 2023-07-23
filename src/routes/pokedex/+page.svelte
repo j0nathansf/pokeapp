@@ -1,7 +1,8 @@
 <script>
-    import { onMount } from 'svelte';
-    import Footer from "../../components/Footer.svelte";
-    import PokeCard from "../../components/PokeCard.svelte";
+    import { onMount } from 'svelte'
+    import Footer from "$components/Footer.svelte"
+    import PokeCard from "$components/PokeCard.svelte"
+    import Skeleton from "$components/Skeleton.svelte"
     let searchValue = ""
     let offset = 20 * Math.floor(Math.random() * 40)
     let data = {
@@ -47,9 +48,14 @@
             <input class="rounded-40 bg-white px-8 py-4 font-montserrat" bind:value={searchValue} type="text" placeholder="Search a pokemon..." />
         </section>
         <section class="flex flex-wrap gap-y-12 gap-x-6">
-            {#each data.pokemonList as pokemonData}
-                <PokeCard {pokemonData} />
-            {/each}
+            {#if data.loading || !data.pokemonList.length}
+                <Skeleton />
+            {:else}
+                {#each data.pokemonList as pokemonData}
+                    <PokeCard {pokemonData} />
+                {/each}
+            {/if}
+
         </section>
         <Footer />
     </div>

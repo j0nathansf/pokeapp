@@ -1,6 +1,6 @@
 <script>
-    import ButtonLink from "../components/ButtonLink.svelte"
-    import Footer from "../components/Footer.svelte";
+    import ButtonLink from "$components/ButtonLink.svelte"
+    import Footer from "$components/Footer.svelte"
 </script>
 
 <main class="yellow-gradient h-auto py-8 desktop:py-10 tablet:px-10 medium:px-0 overflow-hidden tablet:h-full medium:h-[calc(100vh-96px)]">
