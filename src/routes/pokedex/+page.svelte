@@ -16,7 +16,7 @@
 	};
 
 	onMount(async () => {
-		fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=25`)
+		fetch(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=25`)
 			.then((response) => {
 				if (!response.ok) {
 					throw new Error(`An error occurred - Status code : ${response.status}`);
@@ -46,7 +46,7 @@
 	>
 		<section class="flex flex-col gap-9">
 			<p class="font-montserrat text-center text-36">
-				<AnimatedValue start={0} end={data.total} duration={1250} />
+				<AnimatedValue start={0} end={data.total} duration={500} />
 				<span class="font-bold">Pokemons</span> for you to choose your favorite
 			</p>
 			<input
