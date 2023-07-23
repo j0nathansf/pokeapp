@@ -2,7 +2,7 @@
     export let pokemonData
 </script>
 
-<div class="flex card-shadow rounded-8 overflow-hidden w-[328px] h-44">
+<div class="flex card-shadow rounded-8 overflow-hidden w-[328px] h-44 mx-auto">
     <div class="w-[35%] h-full pl-6 z-10 py-4 flex flex-col justify-between">
         <p class="font-karla text-18 font-bold capitalize">{pokemonData.name}</p>
         <section class="flex gap-x-3">
@@ -19,7 +19,7 @@
         </section>
         <section class="flex gap-x-3">
             {#each pokemonData.types as types}
-                <span class="capitalize text-12 rounded-12 px-2 py-1 bg-grass tag-shadow">{types.type.name}</span>
+                <span class="font-montserrat capitalize text-12 rounded-12 px-2 py-1 bg-grass tag-shadow">{types.type.name}</span>
             {/each}
         </section>
     </div>

@@ -4,6 +4,7 @@
     import PokeCard from "$components/PokeCard.svelte"
     import CardSkeleton from "$components/CardSkeleton.svelte"
     let searchValue = ""
+    let cardsNumber = 6
     let offset = 20 * Math.floor(Math.random() * 40)
     let data = {
         loading: true,
@@ -50,7 +51,7 @@
         <section class="flex flex-wrap gap-y-12 gap-x-6">
             {#if data.loading || !data.pokemonList.length}
                 <!-- eslint-disable @typescript-eslint/no-unused-vars -->
-                {#each Array(5) as _}
+                {#each Array(cardsNumber) as _}
                     <CardSkeleton />
                 {/each}
             {:else}
