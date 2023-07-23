@@ -1,13 +1,14 @@
 <script>
+	let tabStats = ['attack', 'defense'];
 	export let pokemonData;
 </script>
 
 <div class="flex card-shadow rounded-8 overflow-hidden w-full max-w-[328px] h-44 mx-auto">
-	<div class="w-[35%] h-full pl-6 z-10 py-4 flex flex-col justify-between">
+	<div class="w-[35%] h-full pl-6 py-4 flex flex-col justify-between">
 		<p class="font-karla text-18 font-bold capitalize">{pokemonData.name}</p>
 		<section class="flex gap-x-3">
 			{#each pokemonData.stats as stats}
-				{#if ['attack', 'defense'].includes(stats.stat.name)}
+				{#if tabStats.includes(stats.stat.name)}
 					<div class="flex flex-col items-center font-karla">
 						<span
 							class="text-16 font-regular rounded-full border-[3px] border-dark p-1.5 h-10 w-10 flex items-center justify-center text-dark"
@@ -27,7 +28,7 @@
 			{/each}
 		</section>
 	</div>
-	<div class="w-[65%] bg-third h-full">
+	<div class="w-[65%] bg-third h-full -z-10">
 		<img
 			src={pokemonData['sprites']['other']['official-artwork']['front_default']}
 			alt={`${pokemonData.name} picture`}

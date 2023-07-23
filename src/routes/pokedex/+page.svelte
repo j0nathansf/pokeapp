@@ -16,7 +16,7 @@
 	};
 
 	onMount(async () => {
-		fetch(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=25`)
+		fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=25`)
 			.then((response) => {
 				if (!response.ok) {
 					throw new Error(`An error occurred - Status code : ${response.status}`);
