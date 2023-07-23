@@ -1,5 +1,6 @@
 <script>
     import ButtonLink from "../components/ButtonLink.svelte"
+    import Footer from "../components/Footer.svelte";
 </script>
 
 <main class="yellow-gradient h-auto py-8 desktop:py-10 tablet:px-10 medium:px-0 overflow-hidden tablet:h-full medium:h-[calc(100vh-96px)]">
@@ -18,10 +19,7 @@
             </div>
             <ButtonLink text="See pokemons" href="/pokedex" isPrimary={false} size={24} />
         </section>
-        <section class="mt-8 desktop:mt-10 flex flex-col-reverse justify-between text-center items-center tablet:flex-row">
-            <p class="font-montserrat text-16">Make with ❤️ for the PokéSpartans team Platzi Master</p>
-            <p class="font-karla font-bold text-18">Ours Team</p>
-        </section>
+        <Footer />
     </div>
 </main>
 

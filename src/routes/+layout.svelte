@@ -2,10 +2,10 @@
   import "../app.css";
   import { page } from '$app/stores';
   let menus = [
-    { name: 'Home', href: '/' },
-    { name: 'Pokédex', href: '/pokedex' },
-    { name: 'Legendaries', href: '/legendaries' },
-    { name: 'Documentation', href: '/documentation' }
+    { name: 'Home', href: '/', target: '_self' },
+    { name: 'Pokédex', href: '/pokedex', target: '_self' },
+    { name: 'Legendaries', href: '/legendaries', target: '_self' },
+    { name: 'Documentation', href: 'https://pokeapi.co/docs/v2', target: '_blank' }
   ]
   let currentPage = $page.url.pathname
   let notFound = !!$page.error
@@ -26,7 +26,7 @@
       {:else}
         {#each menus as menu}
           <li class="font-montserrat flex flex-col">
-            <a href={menu.href} target="_self" rel="noreferrer">
+            <a href={menu.href} target={menu.target} rel="noreferrer">
               {menu.name}
             </a>
             {#if menu.href === currentPage}

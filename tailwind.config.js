@@ -9,8 +9,11 @@ export default {
       danger: '#D93E30',
       white: '#F2F2F2',
       grass: '#73D677',
-      dark: '#212121'
-
+      dark: '#212121',
+      gray: {
+        light: '#F6F7F9',
+        dark: '#4B4B4B'
+      }
     },
     borderRadius: {
       0: '0px',
@@ -19,6 +22,7 @@ export default {
       12: '12px',
       16: '16px',
       24: '24px',
+      40: '40px',
       full: '9999px'
     },
     screens: {
