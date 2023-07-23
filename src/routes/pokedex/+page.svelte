@@ -3,6 +3,7 @@
 	import Footer from '$components/Footer.svelte';
 	import PokeCard from '$components/PokeCard.svelte';
 	import CardSkeleton from '$components/CardSkeleton.svelte';
+	import AnimatedValue from '$components/AnimatedValue.svelte';
 	let searchValue = '';
 	let cardsNumber = 6;
 	let offset = 20 * Math.floor(Math.random() * 40);
@@ -45,7 +46,8 @@
 	>
 		<section class="flex flex-col gap-9">
 			<p class="font-montserrat text-center text-36">
-				{data.total} <span class="font-bold">Pokemons</span> for you to choose your favorite
+				<AnimatedValue start={0} end={data.total} duration={1250} />
+				<span class="font-bold">Pokemons</span> for you to choose your favorite
 			</p>
 			<input
 				class="rounded-40 bg-white px-8 py-4 font-montserrat"
@@ -54,7 +56,7 @@
 				placeholder="Search a pokemon..."
 			/>
 		</section>
-		<section class="flex flex-wrap gap-y-12 gap-x-6">
+		<section class="grid grid-cols-1 tablet:grid-cols-2 medium:grid-cols-3 gap-y-12 gap-x-6">
 			{#if data.loading || !data.pokemonList.length}
 				<!-- eslint-disable @typescript-eslint/no-unused-vars -->
 				{#each Array(cardsNumber) as _}

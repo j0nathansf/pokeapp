@@ -2,7 +2,7 @@
 	import Skeleton from '$components/Skeleton.svelte';
 </script>
 
-<div class="flex card-shadow rounded-8 overflow-hidden w-[328px] h-44 mx-auto">
+<div class="flex card-shadow rounded-8 overflow-hidden w-full max-w-[328px] h-44 mx-auto">
 	<div class="w-[35%] h-full pl-6 z-10 py-4 flex flex-col justify-between">
 		<Skeleton height="18px" />
 		<section class="flex items-center gap-x-2">
