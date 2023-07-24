@@ -33,7 +33,7 @@
 					You can know the type of Pokemon, its strengths, disadvantages and abilities
 				</p>
 			</div>
-			<ButtonLink text="See pokemons" href="/pokedex" isPrimary={false} size={24} />
+			<ButtonLink text="See pokemons" href="/pokedex" isPrimary={false} size={18} />
 		</section>
 		<Footer />
 	</div>

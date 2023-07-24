@@ -25,7 +25,7 @@
 					>has won this time.</span
 				>
 			</p>
-			<ButtonLink text="Return" href="/" isPrimary={true} size={16} />
+			<ButtonLink text="Return" href="/" isPrimary={true} size={18} />
 		</section>
 	</main>
 </div>
