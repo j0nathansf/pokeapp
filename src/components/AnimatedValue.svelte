@@ -1,24 +1,19 @@
 <script>
-	import { onMount } from 'svelte';
+	let currentValue = 0;
+	export let targetValue = 0;
 
-	export let start = 0;
-	export let end = 0;
-	export let duration = 1250;
-
-	let value = start;
-	let startTimestamp = null;
-	const step = (timestamp) => {
-		if (!startTimestamp) startTimestamp = timestamp;
-		const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-		value = Math.floor(progress * (end - start) + start);
-		if (progress < 1) {
-			window.requestAnimationFrame(step);
+	const updateCounter = () => {
+		const inc = Math.floor((targetValue - currentValue) / 100);
+		if (currentValue < targetValue && inc > 0) {
+			currentValue += inc;
+		} else {
+			currentValue = targetValue;
 		}
 	};
 
-	onMount(() => {
-		window.requestAnimationFrame(step);
-	});
+	$: if (currentValue < targetValue) {
+		setTimeout(updateCounter, 1);
+	}
 </script>
 
-<span>{value}</span>
+<span>{currentValue}</span>

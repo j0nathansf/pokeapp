@@ -46,7 +46,7 @@
 	>
 		<section class="flex flex-col gap-9">
 			<p class="font-montserrat text-center text-24 tablet:text-36">
-				<AnimatedValue start={0} end={data.total} duration={500} />
+				<AnimatedValue targetValue={data.total} />
 				<span class="font-bold">Pokemons</span> for you to choose your favorite
 			</p>
 			<input
